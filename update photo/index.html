@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Profile Pic</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="box">
+        <div class="card">
+            <h1>PUBG COMMANDER</h1>
+            <p>@commander_Sunny</p>
+            <img src="images/profile.png" id="profilepic">
+            <label for="inputfile" > UPDATE PIC</label>
+            <input type="file" accept="image/jpeg , image/png , image/jpg" id="inputfile">
+        </div>
+    </div>
+
+    <script>
+        let profilepic = document.getElementById("profilepic");
+        let inputfile = document.getElementById("inputfile");
+
+        inputfile.onchange = function(){
+            profilepic.src = URL.createObjectURL(inputfile.files[0]);    
+        }
+    </script>
+</body>
+</html>
